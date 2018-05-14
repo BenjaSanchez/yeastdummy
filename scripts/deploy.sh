@@ -13,8 +13,8 @@ else
 fi
 
 # configure git
-git config --global user.email "deploy@travis-ci.org"
-git config --global user.name "Travis CI Deployment Bot"
+git config --global user.email "bensan@chalmers.se"
+git config --global user.name "BenjaSanchez"
 
 # clone the deploy branch
 cd "${HOME}"
