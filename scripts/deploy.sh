@@ -13,8 +13,8 @@ else
 fi
 
 # configure git
-git config --global user.email "bensan@chalmers.se"
-git config --global user.name "BenjaSanchez"
+git config --global user.email "deploy@travis-ci.org"
+git config --global user.name "Travis CI Deployment Bot"
 
 # clone the deploy branch
 cd "${HOME}"
@@ -25,8 +25,8 @@ cp "${TRAVIS_BUILD_DIR}/Results/${TRAVIS_COMMIT}.json" "${HOME}/${DEPLOY_BRANCH}
 
 # create the report pointing to the history stored in deploy branch
 # need to be in build directory to access git history
-cd "${TRAVIS_BUILD_DIR}"
-memote report history "${HOME}/${DEPLOY_BRANCH}/Results/" --filename="${HOME}/${DEPLOY_BRANCH}/index.html"
+#cd "${TRAVIS_BUILD_DIR}"
+#memote report history "${HOME}/${DEPLOY_BRANCH}/Results/" --filename="${HOME}/${DEPLOY_BRANCH}/index.html"
 
 #add, commit and push files
 cd "${HOME}/${DEPLOY_BRANCH}"
